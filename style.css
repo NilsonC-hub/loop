@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Syne;
+  src: url("./fonts/Syne.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LOOP Credit";
+  src: url("./fonts/NotoSansSC-Credit.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+6C88,U+7FF0,U+8F69;
+}
+:root {
+  color-scheme: dark;
+  --ink: #d4e5bd;
+  --ground: #304e32;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: var(--ground); }
+body { font-family: Syne, sans-serif; color: var(--ink); }
+::selection { color: var(--ground); background: var(--ink); }
+#loop { width: 100%; height: 100%; position: relative; isolation: isolate; }
+canvas {
+  display: block; width: 100%; height: 100%; touch-action: none; cursor: none;
+  position: absolute; inset: 0;
+}
+canvas:focus { outline: none; }
+canvas:focus-visible { outline: 1px solid var(--ink); outline-offset: -10px; }
+h1 {
+  position: absolute; top: 28px; left: 34px; margin: 0;
+  font-size: 27px; font-weight: 700; letter-spacing: -.035em;
+  line-height: 1; pointer-events: none; user-select: none;
+}
+#sound {
+  position: absolute; right: 24px; top: 16px;
+  width: 48px; height: 48px; padding: 10px; border: 0;
+  color: inherit; background: transparent; cursor: pointer;
+  opacity: .75; transition: opacity .2s ease;
+}
+#sound:hover, #sound:focus-visible { opacity: 1; }
+#sound:focus-visible { outline: 1px solid currentColor; outline-offset: 0; border-radius: 50%; }
+#sound svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+.sound-slash { opacity: .85; transition: opacity .2s; }
+[aria-pressed="true"] .sound-slash { opacity: 0; }
+#sound[aria-pressed="false"] .sound-bars { opacity: .5; }
+#hint {
+  position: absolute; left: 50%; bottom: 29px; transform: translateX(-50%);
+  margin: 0; font-size: 12px; font-weight: 500; letter-spacing: .035em;
+  white-space: nowrap; opacity: .8; pointer-events: none;
+  transition: opacity 1s ease;
+}
+#hint.hidden { opacity: 0; }
+#credit {
+  position: absolute; right: 34px; bottom: 28px; margin: 0;
+  font-family: Syne, "LOOP Credit", sans-serif;
+  font-size: 11px; font-weight: 500; line-height: 1.4;
+  letter-spacing: .015em; opacity: .72; pointer-events: none;
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.no-script { position: absolute; inset: 50% 0 auto; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  #hint, #sound, .sound-slash { transition: none; }
+}

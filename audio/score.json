@@ -1,0 +1,46 @@
+{
+  "title": "LOOP — four small conversations",
+  "bpm": 76,
+  "beatsPerPhrase": 8,
+  "scale": "C major pentatonic: C D E G A",
+  "eventFormat": ["beat", "instrument", "midi", "velocity", "gateBeats", "motionOnly"],
+  "baseMidi": {"pluck": 60, "bell": 79},
+  "scenes": [
+    {
+      "name": "rings",
+      "description": "Low plucked question, rising answer, then a descending return; the empty beats are part of the phrase.",
+      "phrases": [
+        [[0,"pluck",60,0.86,0.9],[1,"pluck",64,0.60,0.7],[2.5,"pluck",67,0.72,0.8],[4,"pluck",69,0.70,0.9],[5,"pluck",67,0.54,0.7],[6.5,"pluck",62,0.66,1.1],[7.5,"pluck",64,0.42,0.4,true]],
+        [[0,"pluck",60,0.82,1.1],[1.5,"pluck",62,0.56,0.7],[2.5,"pluck",64,0.67,0.8],[4,"pluck",67,0.76,1.0],[5.5,"pluck",64,0.52,0.7],[6.5,"pluck",62,0.58,0.8]],
+        [[0,"pluck",72,0.70,0.9],[1,"pluck",69,0.59,0.7],[2,"pluck",67,0.65,0.8],[3.5,"pluck",64,0.56,0.8],[5,"pluck",62,0.62,0.7],[6,"pluck",60,0.83,1.8],[4.5,"pluck",67,0.39,0.4,true]]
+      ]
+    },
+    {
+      "name": "diagonals",
+      "description": "Breath across the field, followed by a small high response. Air and notes leave room for each other.",
+      "phrases": [
+        [[0,"air",null,0.38,1.4],[1.5,"bell",72,0.65,0.65],[2.5,"bell",76,0.48,0.75],[4,"air",null,0.31,1.2],[5.5,"bell",79,0.61,0.65],[6.5,"bell",74,0.47,1.0],[7.5,"bell",76,0.36,0.4,true]],
+        [[0,"bell",76,0.62,0.9],[1.5,"air",null,0.33,1.5],[3,"bell",74,0.47,0.6],[4.5,"bell",72,0.58,1.0],[6,"air",null,0.30,1.3]],
+        [[0,"air",null,0.36,1.4],[1.5,"bell",79,0.56,0.7],[2.5,"bell",76,0.45,0.7],[4,"bell",74,0.54,0.9],[5.5,"air",null,0.29,1.0],[6.5,"bell",72,0.64,1.3]]
+      ]
+    },
+    {
+      "name": "dots",
+      "description": "A low point anchors changing clusters of dry ticks: two, three, space, response.",
+      "phrases": [
+        [[0,"pluck",48,0.78,0.75],[0.5,"tick",null,0.60,0.2],[1.25,"tick",null,0.36,0.2],[2,"tick",null,0.68,0.2],[2.5,"tick",null,0.42,0.2],[4,"pluck",55,0.65,0.75],[5,"tick",null,0.57,0.2],[5.5,"tick",null,0.35,0.2],[6.5,"tick",null,0.66,0.2],[7,"tick",null,0.31,0.2,true]],
+        [[0,"pluck",48,0.74,0.8],[1,"tick",null,0.66,0.2],[1.5,"tick",null,0.38,0.2],[1.75,"tick",null,0.29,0.2],[3,"tick",null,0.54,0.2],[4,"pluck",52,0.64,0.8],[5.5,"tick",null,0.61,0.2],[6,"tick",null,0.37,0.2],[7,"tick",null,0.56,0.2]],
+        [[0,"pluck",55,0.72,0.75],[0.75,"tick",null,0.49,0.2],[2,"tick",null,0.62,0.2],[2.5,"tick",null,0.37,0.2],[3,"tick",null,0.29,0.2],[4,"pluck",48,0.82,0.95],[5.25,"tick",null,0.55,0.2],[6.5,"tick",null,0.39,0.2]]
+      ]
+    },
+    {
+      "name": "spiral",
+      "description": "Bright five-note ascent with a syncopated turn; the response folds the scale back down.",
+      "phrases": [
+        [[0,"bell",72,0.80,0.65],[0.75,"bell",74,0.55,0.6],[1.5,"bell",76,0.68,0.65],[2.5,"bell",79,0.76,0.7],[3.5,"bell",81,0.60,0.9],[5,"bell",79,0.69,0.65],[6,"bell",76,0.55,0.65],[7,"bell",72,0.77,0.9],[4.5,"bell",76,0.38,0.4,true]],
+        [[0,"bell",79,0.78,0.8],[1,"bell",76,0.57,0.65],[2,"bell",74,0.62,0.65],[3.5,"bell",72,0.74,0.9],[5,"bell",74,0.51,0.6],[5.75,"bell",76,0.62,0.6],[6.5,"bell",79,0.70,1.2]],
+        [[0,"bell",76,0.75,0.9],[1.5,"bell",79,0.65,0.65],[2.25,"bell",81,0.54,0.55],[3,"bell",79,0.72,0.75],[4.5,"bell",76,0.62,0.65],[5.5,"bell",74,0.50,0.65],[6.5,"bell",72,0.81,0.9]]
+      ]
+    }
+  ]
+}

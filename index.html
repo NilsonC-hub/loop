@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#304e32">
+  <meta name="description" content="LOOP. An optical instrument in four movements. Drag, listen, loop.">
+  <title>LOOP</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="loop" data-scene="0" data-phase="0" data-dragging="false" data-sound="off">
+    <canvas id="field" tabindex="0" aria-label="LOOP interactive artwork. Drag horizontally to change the movement. Click to pluck. Arrow keys change movement, space pauses, M toggles sound."></canvas>
+    <h1 aria-label="LOOP">LOOP</h1>
+    <button id="sound" type="button" aria-label="Enable sound" aria-pressed="false" title="Enable sound · M">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path class="sound-bars" d="M5 14v4M10.5 9v14M16 5v22M21.5 10v12M27 14v4"/>
+        <path class="sound-slash" d="M5 27 27 5"/>
+      </svg>
+    </button>
+    <p id="credit">Graphics by <span lang="zh-Hans">沈翰轩</span></p>
+    <p id="hint">Drag to unfold. Click to play.</p>
+    <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+    <noscript><p class="no-script">LOOP needs JavaScript.</p></noscript>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
